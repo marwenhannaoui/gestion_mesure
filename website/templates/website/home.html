@@ -1,0 +1,20 @@
+
+{% extends "base.html" %}
+{% block title %}HOME{% endblock %}
+{% block content %}
+<h2>Welcome to the Gestion Mesure App</h2>
+<ul>
+    {% for grandeur in grandeurs %}
+      <li>
+        <a href="{% url 'detail' grandeur.id %}">
+         {{grandeur.nom}}
+        </a>
+        <a style="margin-left: 50px !important;" type="button" href="grandeurs/delete-grandeur/{{ grandeur.id }}">Delete</a>
+
+      </li>
+    {% endfor %}
+  </ul>
+    
+
+
+{% endblock %}

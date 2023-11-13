@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Grandeurs{% endblock %}
+
+{% block content %}
+    <h2>Grandeurs list</h2>
+    <ul>
+      {% for grandeur in grandeurs %}
+        <li>
+          <a href="{% url 'detail' grandeur.id %}">
+           {{grandeur.nom}}
+          </a>
+          <a style="margin-left: 50px !important; color: red !important;" type="button" href="{% url 'delete-grandeur' grandeur.id %}">Delete</a>
+  <a href="{% url 'detail' grandeur.id %}">
+        </li>
+      {% endfor %}
+    </ul>
+    <a  href="{% url 'new' %}">
+
+      <strong>Add new</strong>
+    </a>
+{% endblock %}
