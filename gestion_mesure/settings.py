@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website.apps.WebsiteConfig',
-    'grandeurs.apps.GrandeursConfig'
+    'grandeurs.apps.GrandeursConfig',
+    'webApi.apps.WebapiConfig',
+    'rest_framework',
+
 ]
 
 MIDDLEWARE = [

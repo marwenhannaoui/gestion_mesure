@@ -5,5 +5,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('website/', include('website.urls')),
     path('grandeurs/',include('grandeurs.urls')),
+    path('webapi/',include('webApi.urls')),
 
 ]
